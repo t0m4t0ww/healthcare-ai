@@ -1,6 +1,6 @@
-# HEALTHCARE AI - HỆ THỐNG QUẢN LÝ Y TẾ THÔNG MINH
-
 <div align="center">
+
+# Healthcare AI - Hệ Thống Quản Lý Y Tế Thông Minh
 
 ![Healthcare AI](https://img.shields.io/badge/Healthcare-AI-0056D2?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -8,138 +8,220 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.0+-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![AI](https://img.shields.io/badge/Google_Gemini-AI-FF9900?style=for-the-badge)
 
-<br>
-
-> **Hệ thống quản lý bệnh viện toàn diện tích hợp Trí tuệ nhân tạo (AI) hỗ trợ chẩn đoán và điều trị chuẩn y khoa.**
+### Hệ thống quản lý bệnh viện toàn diện tích hợp AI hỗ trợ chẩn đoán và điều trị
 
 </div>
 
 ---
 
-## MỤC LỤC
+## Mục Lục
 
-1. [Giới Thiệu Chung](#1-giới-thiệu-chung)
-2. [Hệ Thống Tính Năng](#2-hệ-thống-tính-năng)
-3. [Công Nghệ Sử Dụng](#3-công-nghệ-sử-dụng)
-4. [Kiến Trúc Hệ Thống](#4-kiến-trúc-hệ-thống)
-5. [Cấu Trúc Dữ Liệu](#5-cấu-trúc-dữ-liệu)
-6. [Thông Tin Dự Án](#6-thông-tin-dự-án)
-
----
-
-## 1. GIỚI THIỆU CHUNG
-
-**Healthcare AI** là giải pháp chuyển đổi số y tế, kết hợp sức mạnh của Generative AI và Computer Vision để giải quyết các bài toán cốt lõi:
-
-* **Hỗ trợ chuyên môn:** Cung cấp "Second Opinion" cho bác sĩ trong chẩn đoán phân biệt.
-* **Chuẩn hóa quy trình:** Áp dụng format SOAP (Subjective, Objective, Assessment, Plan) điện tử.
-* **Tối ưu vận hành:** Quản lý lịch hẹn, hồ sơ bệnh án (EHR) và kết nối thời gian thực.
-* **Phân tích hình ảnh:** Tự động phát hiện bất thường trên X-quang/CT scan.
+- [Giới Thiệu](#giới-thiệu)
+- [Tính Năng Chính](#tính-năng-chính)
+- [Công Nghệ Sử Dụng](#công-nghệ-sử-dụng)
+- [Kiến Trúc Hệ Thống](#kiến-trúc-hệ-thống)
+- [Cơ Sở Dữ Liệu](#cơ-sở-dữ-liệu)
+- [Thông Tin Dự Án](#thông-tin-dự-án)
 
 ---
 
-## 2. HỆ THỐNG TÍNH NĂNG
+## Giới Thiệu
 
-### Phân Hệ AI & Y Khoa
+**Healthcare AI** là giải pháp chuyển đổi số y tế toàn diện, kết hợp sức mạnh của Generative AI và Computer Vision để giải quyết các bài toán cốt lõi trong quản lý bệnh viện:
 
-| Module | Chức Năng Chi Tiết |
-| :--- | :--- |
-| **Doctor AI Copilot** | Tự động chẩn đoán phân biệt dựa trên triệu chứng lâm sàng.<br>Đề xuất xét nghiệm (Lab tests) theo guideline y khoa.<br>Cảnh báo dấu hiệu nguy hiểm (Red flags warning). |
-| **X-ray Analysis** | Sử dụng YOLO để khoanh vùng tổn thương.<br>Dùng Gemini Vision phân tích chi tiết và tạo báo cáo. |
-| **Patient Assistant** | Giải thích thuật ngữ y khoa trong hồ sơ bệnh án.<br>Nhắc lịch uống thuốc và tái khám tự động.<br>Tư vấn sức khỏe 24/7 (có kiểm soát an toàn). |
+- **Hỗ trợ chuyên môn:** Cung cấp "Second Opinion" cho bác sĩ trong chẩn đoán phân biệt dựa trên triệu chứng và lâm sàng
+- **Chuẩn hóa quy trình:** Áp dụng format SOAP (Subjective, Objective, Assessment, Plan) điện tử chuẩn y khoa
+- **Tối ưu vận hành:** Quản lý lịch hẹn thông minh, hồ sơ bệnh án điện tử (EHR) và kết nối thời gian thực
+- **Phân tích hình ảnh:** Tự động phát hiện và phân tích bất thường trên X-quang/CT scan bằng AI
 
-### Phân Hệ Quản Lý (Portals)
+### Điểm Nổi Bật
 
-| Cổng Truy Cập | Tiện Ích & Công Cụ |
-| :--- | :--- |
-| **Doctor Portal** | **Dashboard:** Lịch làm việc.<br>**Consultation:** Giao diện khám chuẩn SOAP.<br>**E-Prescription:** Kê đơn điện tử. |
-| **Patient Portal** | **Booking:** Đặt lịch khám.<br>**Records:** Hồ sơ sức khỏe trọn đời.<br>**Telehealth:** Tư vấn từ xa. |
-| **Admin Portal** | **Analytics:** Thống kê hiệu suất bệnh viện.<br>**Management:** Quản lý người dùng & phân quyền (RBAC). |
-
----
-
-## 3. CÔNG NGHỆ SỬ DỤNG
-
-### Technology Stack
-
-| Lớp (Layer) | Công Nghệ & Thư Viện |
-| :--- | :--- |
-| **Backend** | **Python (Flask 3.0)**, Pydantic, APScheduler, ReportLab |
-| **Frontend** | **React 18**, Ant Design 5, TailwindCSS, Recharts |
-| **Database** | **MongoDB 5.0+** |
-| **AI / ML** | **Google Gemini API**, YOLO v8, PyTorch |
-| **Real-time** | Socket.IO (Chat & Notifications) |
-| **Security** | JWT, Bcrypt, RBAC |
+- AI Medical Copilot hỗ trợ chẩn đoán cho bác sĩ
+- Hỗ trợ đa chuyên khoa (Nội, Nhi, Sản)
+- Giao tiếp real-time qua Socket.IO
+- Bảo mật dữ liệu y tế theo chuẩn HIPAA
+- Giao diện responsive trên mọi thiết bị
 
 ---
 
-## 4. KIẾN TRÚC HỆ THỐNG
+## Tính Năng Chính
 
-```mermaid
-graph TD
-    subgraph Client_Layer [Client Layer]
-        A[Admin Portal]
-        B[Doctor Portal]
-        C[Patient Portal]
-    end
+### AI Medical Assistant
 
-    subgraph Interface_Layer [Interface & Load Balancing]
-        NGINX[NGINX / Load Balancer]
-    end
+#### Doctor AI Copilot
+- Chẩn đoán phân biệt tự động dựa trên triệu chứng lâm sàng
+- Đề xuất xét nghiệm cần thiết theo guideline y khoa
+- Gợi ý phác đồ điều trị phù hợp với từng bệnh
+- Cảnh báo dấu hiệu nguy hiểm (Red flags warning)
+- Tích hợp với thông tin phiên khám (Context-aware)
 
-    subgraph App_Layer [Application Layer]
-        API[Flask Backend REST API]
-        Socket[Socket.IO Server]
-        Static[Static Files Service]
-    end
+#### X-ray Analysis AI
+- Phát hiện bất thường bằng YOLO v8 model
+- Phân tích chi tiết hình ảnh qua Gemini Vision AI
+- Tự động tạo báo cáo kết quả chuyên môn
+- Tích hợp liền mạch vào quy trình khám bệnh
 
-    subgraph Data_AI_Layer [Data & AI Layer]
-        DB[(MongoDB Database)]
-        AI[Google Gemini AI]
-        YOLO[YOLO v8 Model]
-    end
+#### Patient AI Assistant
+- Giải thích hồ sơ bệnh án bằng ngôn ngữ dễ hiểu
+- Tư vấn sức khỏe cơ bản 24/7
+- Nhắc nhở tái khám và lịch uống thuốc tự động
+- Kiểm soát an toàn (không thay thế bác sĩ)
 
-    Client_Layer --> NGINX
-    NGINX --> API
-    NGINX --> Socket
-    NGINX --> Static
-    
-    API --> DB
-    API --> AI
-    API --> YOLO
-    Socket --> DB
+### Doctor Portal
+
+- **Dashboard:** Tổng quan lịch làm việc và công việc hôm nay
+- **Consultation:** Giao diện khám bệnh chuẩn SOAP format
+- **EHR Management:** Quản lý hồ sơ bệnh án điện tử
+- **AI Assistant:** Trợ lý AI hỗ trợ chẩn đoán
+- **X-ray Analysis:** Công cụ phân tích hình ảnh y tế
+- **E-Prescription:** Kê đơn thuốc điện tử
+- **Schedule Management:** Tạo và quản lý lịch làm việc
+
+### Patient Portal
+
+- **Dashboard:** Theo dõi sức khỏe tổng quan
+- **Booking:** Đặt lịch khám online 24/7
+- **Medical Records:** Xem hồ sơ bệnh án cá nhân
+- **Chat AI:** Tư vấn sức khỏe với AI assistant
+- **Appointments:** Quản lý lịch hẹn khám bệnh
+- **Download PDF:** Tải hồ sơ khám bệnh định dạng PDF
+- **Doctor Ratings:** Đánh giá chất lượng dịch vụ bác sĩ
+
+### Admin Portal
+
+- **Dashboard:** Thống kê và phân tích toàn hệ thống
+- **User Management:** Quản lý bác sĩ, bệnh nhân
+- **Appointment Management:** Giám sát lịch hẹn toàn viện
+- **EHR Management:** Quản lý hồ sơ bệnh án tập trung
+- **Reports & Analytics:** Báo cáo thống kê chi tiết
+- **System Settings:** Cấu hình và phân quyền hệ thống (RBAC)
+
+---
+
+## Công Nghệ Sử Dụng
+
+### Backend
+
+- **Framework:** Flask 3.0 (Python 3.9+)
+- **Database:** MongoDB 5.0+ với PyMongo
+- **AI/ML:** Google Gemini AI, YOLO v8, PyTorch, Ultralytics
+- **Real-time:** Socket.IO
+- **Authentication:** JWT, Bcrypt
+- **PDF Generation:** ReportLab
+- **Email Service:** SendGrid / Mailgun
+- **Validation:** Pydantic
+- **Task Scheduler:** APScheduler
+
+### Frontend
+
+- **Framework:** React 18+ với Hooks
+- **UI Library:** Ant Design 5
+- **Styling:** TailwindCSS + CSS Modules
+- **Charts:** Recharts
+- **State Management:** Context API
+- **Routing:** React Router v6
+- **HTTP Client:** Axios
+- **Real-time:** Socket.IO Client
+
+### DevOps & Security
+
+- **Version Control:** Git
+- **Environment Management:** dotenv
+- **Security:** JWT Authentication, RBAC, Rate Limiting
+- **Testing:** pytest, Jest
+
+---
+
+## Kiến Trúc Hệ Thống
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     CLIENT LAYER                             │
+├─────────────────────────────────────────────────────────────┤
+│  Admin Portal    │   Doctor Portal   │   Patient Portal     │
+│  (React)         │   (React)         │   (React)            │
+└────────┬─────────┴──────────┬────────┴──────────┬───────────┘
+         │                    │                    │
+         └────────────────────┼────────────────────┘
+                              │
+                    ┌─────────▼─────────┐
+                    │   NGINX/Load      │
+                    │   Balancer        │
+                    └─────────┬─────────┘
+                              │
+         ┌────────────────────┼────────────────────┐
+         │                    │                    │
+┌────────▼─────────┐ ┌───────▼────────┐ ┌────────▼─────────┐
+│  Flask Backend   │ │  Socket.IO     │ │  Static Files    │
+│  (REST API)      │ │  (Real-time)   │ │  (Images, PDFs)  │
+└────────┬─────────┘ └───────┬────────┘ └──────────────────┘
+         │                    │
+         └────────────────────┼─────────────────────┐
+                              │                     │
+                    ┌─────────▼─────────┐  ┌───────▼────────┐
+                    │   MongoDB         │  │  Google Gemini │
+                    │   Database        │  │  API + YOLO    │
+                    └───────────────────┘  └────────────────┘
 ```
 
+### Luồng Hoạt Động
+
+1. **Client Layer:** 3 giao diện React tương ứng với 3 vai trò (Admin, Doctor, Patient)
+2. **Load Balancer:** NGINX phân phối request và cân bằng tải
+3. **Application Layer:** Flask xử lý REST API, Socket.IO xử lý real-time
+4. **Data Layer:** MongoDB lưu trữ dữ liệu, Gemini AI + YOLO xử lý AI
+
 ---
 
-## 5. CẤU TRÚC DỮ LIỆU
+## Cơ Sở Dữ Liệu
 
-Danh sách các collections chính trong MongoDB:
+### MongoDB Collections
 
 | Collection | Mô Tả |
-| :--- | :--- |
-| `users` / `doctors` / `patients` | Quản lý danh tính và hồ sơ người dùng. |
-| `ehr_records` | Hồ sơ bệnh án điện tử (EHR). |
-| `consultations` | Phiên khám bệnh. |
-| `xray_results` | Kết quả phân tích hình ảnh. |
-| `appointments` / `time_slots` | Đặt lịch và quản lý khung giờ khám. |
-| `audit_logs` | Nhật ký hệ thống phục vụ bảo mật. |
+|------------|-------|
+| `users` | Tài khoản người dùng (Admin, Doctor) |
+| `patients` | Thông tin bệnh nhân |
+| `doctors` | Hồ sơ bác sĩ và chuyên khoa |
+| `appointments` | Lịch hẹn khám bệnh |
+| `time_slots` | Khung giờ làm việc của bác sĩ |
+| `ehr_records` | Hồ sơ bệnh án điện tử (EHR) |
+| `consultations` | Phiên khám bệnh chi tiết |
+| `conversations` | Cuộc trò chuyện |
+| `messages` | Tin nhắn chat |
+| `xray_results` | Kết quả phân tích X-quang |
+| `notifications` | Thông báo hệ thống |
+| `ratings` | Đánh giá bác sĩ |
+| `audit_logs` | Nhật ký truy cập và thay đổi |
 
 ---
 
-## 6. THÔNG TIN DỰ ÁN
+## Thông Tin Dự Án
+
+### Sinh viên thực hiện
+
+- **Họ tên:** Nguyễn Phạm Thái Bảo
+- **MSSV:** 2200006865
+- **Lớp:** 22DTH2A
+- **Khoa:** Công nghệ thông tin
+- **Trường:** Đại học Nguyễn Tất Thành
+
+### Giảng viên hướng dẫn
+
+- **Họ tên:** Đỗ Hoàng Nam
+- **Học hàm, học vị:** Thạc sĩ
+
+### Liên hệ
+
+- **Email:** nptb137@gmail.com
+- **GitHub:** [@t0m4t0ww](https://github.com/t0m4t0ww)
+- **Repository:** [healthcare-ai](https://github.com/t0m4t0ww/healthcare-ai)
+
+---
 
 <div align="center">
 
-| Hạng Mục | Thông Tin Chi Tiết |
-| :--- | :--- |
-| **Sinh viên thực hiện** | **Nguyễn Phạm Thái Bảo**<br>MSSV: 2200006865<br>Lớp: 22DTH2A – Khoa CNTT<br>Trường Đại học Nguyễn Tất Thành |
-| **Giảng viên hướng dẫn** | **Ths. Đỗ Hoàng Nam** |
-| **Liên hệ & Mã nguồn** | Email: nptb137@gmail.com<br>GitHub: [@t0m4t0ww](https://github.com/t0m4t0ww) |
+**Made with passion for Healthcare**
 
-<br><br>
-
-**Made with passion for Healthcare**  
-**Đồ án tốt nghiệp – Năm 2025**
+**Đồ án tốt nghiệp - Năm 2025**
 
 </div>
