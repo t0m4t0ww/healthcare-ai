@@ -148,7 +148,7 @@ Hệ thống sử dụng MongoDB với các collections chính:
 ### Giảng viên hướng dẫn
 
 - Họ tên: Đỗ Hoàng Nam
-- Học hàm, học vị: Thạc sĩ
+- Học vị: Thạc sĩ
 
 ### Liên hệ
 
