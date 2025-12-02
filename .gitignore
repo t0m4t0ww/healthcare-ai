@@ -1,0 +1,87 @@
+
+
+# Environment files
+.env
+.venv
+venv/
+env/
+ENV/
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+node_modules
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Documentation files
+*.md
+# Exclude specific doc files that should be kept
+!backend/app/docs/*.md
+!backend/app/docs/*.yaml
+
+# Tree script
+tree.py
+
+# Database schema reports
+database_schema_report.txt
+database_schema_report.md
+log_database_schema.py
+
+# Check files
+check*.py
+check_*.py
+
+# Test files and folders
+**/tests/
+**/test_*.py
+test_*.py
+*test*.py
+
+# Seed files and folders
+**/seeders/
+**/seed_*.py
+seed_*.py
+*seed*.py
+
+# Scripts folder
+**/scripts/
+
+# Static files
+**/static/
+
+# AI Models
+ai_models/
+
+# VSCode AI rules
+.github/instructions/codacy.instructions.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads
+**/uploads/
+**/upload/

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@ant-design/compatible": "^5.1.4",
+    "antd": "^5.27.6",
+    "recharts": "^3.5.1"
+  }
+}
