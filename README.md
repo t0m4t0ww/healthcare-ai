@@ -26,8 +26,8 @@ Healthcare AI là giải pháp chuyển đổi số y tế toàn diện, kết h
 - Cảnh báo dấu hiệu nguy hiểm (Red flags warning)
 - Tích hợp với thông tin phiên khám (Context-aware)
 
-#### X-ray Analysis AI
-- Phát hiện bất thường bằng YOLO v8 model
+#### X-ray Analysis AI (Đang phát triển)
+- Phát hiện bất thường bằng YOLO v11 model
 - Phân tích chi tiết hình ảnh qua Gemini Vision AI
 - Tự động tạo báo cáo kết quả chuyên môn
 - Tích hợp liền mạch vào quy trình khám bệnh
